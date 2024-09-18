@@ -77,11 +77,11 @@ export default function CountryDetail() {
           <i className="fa-solid fa-arrow-left"></i>&nbsp; Back
         </span>
         {
-          countryData !== null ? (
+          countryData === null ? (
             <CountryDetailShimmer />
           ) :(
         <div className="country-details">
-          <img src={countryData.flag} alt={`${countryData.name} flag`} />
+          <img src={countryData?.flag} alt={`${countryData?.name} flag`} />
           <div className="details-text-container">
             <h1>{countryData.name}</h1>
             <div className="details-text">
